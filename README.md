@@ -1,70 +1,59 @@
-# Solar Data Discovery – Week 1 Setup
-
-## Project Overview
-This repository contains the starter structure for the MoonLight Energy Solutions solar analytics challenge. The goal is to explore, clean, and compare solar farm datasets across Benin, Sierra Leone, and Togo. Subsequent tasks (EDA, cross-country comparison, dashboard) build on the environment prepared here.
-
-## Environment Setup
-Follow these steps to reproduce the development environment:
-
-1. **Clone the repository**
-   ```bash
-  https://github.com/berahaan/solar-challenge-week0.git
-   cd solar-challenge-week0
-   ```
-2. **Create and activate a virtual environment**
-   ```bash
-   python -m venv venv
-   # Windows
-   venv\Scripts\activate
-   # macOS / Linux
-   source venv/bin/activate
-   ```
-3. **Install dependencies**
-   ```bash
-   pip install -r requirements.txt
-   ```
-4. **Verify CI locally (optional)**
-   ```bash
-   python --version
-   ```
-
-## Repository Structure
+# 🌞 Solar Data Discovery
+Kickstart Your AI Mastery with Cross-Country Solar Farm Analysis
+This project analyzes solar farm data from Benin, Sierra Leone, and Togo to identify high-potential regions for solar installation. 
+It includes data cleaning, exploratory analysis, cross-country comparison, and an interactive Streamlit dashboard.
 ```
-.
-├── .github/
-│   └── workflows/
-│       └── ci.yml          # GitHub Actions workflow (installs deps + checks Python version)
-├── .vscode/
-│   └── settings.json       # Workspace defaults (venv + pytest target)
-├── Assignment.txt          # Challenge brief (not part of submission)
-├── data/                   # Raw and cleaned datasets (ignored by git)
+├── app/
+│   └── main.py             # Streamlit dashboard
+├── data/
+│   ├── benin-malanvile.csv
+│   ├── sierraleone-bumbuna.csv
+│   └── togo-dapaong_qc.csv
 ├── notebooks/
-│   ├── __init__.py
-│   └── README.md           # Guidance for notebooks you add per task
-├── requirements.txt        # Base Python dependencies
+│   └── <country>_eda.ipynb # Exploratory Data Analysis notebooks
 ├── scripts/
-│   ├── __init__.py
-│   └── README.md           # Placeholder docs for automation scripts
-├── src/                    # Placeholder for project source code
-├── tests/
-│   └── __init__.py
-└── venv/                   # Local virtual environment (ignored by git)
+│   └── README.md
+├── reports/
+│   ├── Interim_Report.pdf
+│   └── Final_Report.pdf
+├── requirements.txt
+└── README.md
+```
+## Environment Setup
+
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/solar-challenge-week1.git
+cd solar-challenge-week1
 ```
 
-As you proceed with later tasks:
-- Keep all CSVs inside `data/`.
-- Use feature branches like `eda-benin`, `compare-countries`, and `dashboard-dev`.
-- Add notebooks under `notebooks/` and production code under `src/` or `app/`.
+python -m venv venv
+# or using conda
+conda create -n solar python=3.12
 
-## Git Workflow Checklist
-- Create branch `setup-task` and make at least three commits (`init: add .gitignore`, `chore: venv setup`, `ci: add GitHub Actions workflow`, etc.).
-- Open a pull request into `main`, ensure CI passes, then merge.
-- Tag future work to its own branch and PR for clarity.
+```
+pip install -r requirements.txt
+```
 
-## Next Steps
-- Task 2: Start the EDA notebooks on dedicated branches.
-- Task 3: Produce cross-country comparison visuals and summaries.
-- Optional bonus: Build the Streamlit dashboard under `app/`.
+---
 
-Good luck with the solar analytics challenge!
+### **5. Running the Streamlit Dashboard**
+```markdown
+## Launch the Interactive Dashboard
+
+Run the following command:
+```bash
+streamlit run app/main.py
+```
+
+---
+
+### **6. Additional Notes / Insights**
+```markdown
+- All data files are located in the `data/` folder.
+- Cleaned datasets are used in the notebooks for analysis and visualization.
+- Screenshots of the dashboard are available in `reports/dashboard_screenshot.png`.
+- The dashboard allows for interactive exploration to support data-driven decisions.
+```
+
 
