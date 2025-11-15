@@ -36,7 +36,7 @@ This challenge aimed to transform raw solar farm data into actionable insights f
 
 ## 📂 Repository Structure
 
-The project is organized for clarity and reproducibility.
+The project is organized for clarity and reproducibility as below .
 ```
 📁 solar-challenge-week1/
 ├── app/
