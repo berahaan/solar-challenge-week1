@@ -4,7 +4,7 @@ on: [push, pull_request]   # 👈 When this workflow is triggered
 # It runs automatically every time you push code or open a pull request.
 
 jobs:
-  build:                    # A job is a group of steps
+  build:                    
     runs-on: ubuntu-latest  # The virtual machine (OS) GitHub will use
 
     steps:
